@@ -25,6 +25,10 @@
               showButtonPanel: true
             });
           });
+
+          function goButtonOnClick() {
+            alert("Go button was clicked!");
+          }
         </script>
     </head>
     <body>
@@ -32,7 +36,7 @@
         <div id="input">
           <form>
             <input type="text" id="input-date" value="Pick a date..."></input>
-            <input type="button" id="input-go" value="Go"></input>
+            <input type="button" id="input-go" value="Go" onclick="goButtonOnClick()"></input>
           </form>
         </div>
 
