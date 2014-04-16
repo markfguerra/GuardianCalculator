@@ -27,7 +27,7 @@
           });
 
           function goButtonOnClick() {
-            alert("Go button was clicked!");
+            $( "#results" ).show();
           }
         </script>
     </head>
@@ -40,7 +40,7 @@
           </form>
         </div>
 
-        <div id="results">
+        <div id="results" style="display:none">
           150 days from
           <span id="result-label-inputdate">FOOBAR</span>
           is
