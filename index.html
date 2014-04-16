@@ -32,8 +32,17 @@
           function goButtonOnClick() {
             $( "#results" ).show();
 
-            var inputDate = $( "#input-date" ).val();
-            $( "#result-label-inputdate" ).html(inputDate);
+            // Use DateJs to parse the input date and calculate the output date
+            var inputDate = Date.parse(
+              $( "#input-date" ).val()
+            );
+
+            // Use DateJs to create a nice presentation of the dates
+            var dateFormat = "dddd, MMMM d, yyyy";
+            var formattedInputDate = inputDate.toString(dateFormat);
+
+            // Display the dates on the page
+            $( "#result-label-inputdate" ).html(formattedInputDate);
           }
         </script>
     </head>
