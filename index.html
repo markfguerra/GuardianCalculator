@@ -36,13 +36,17 @@
             var inputDate = Date.parse(
               $( "#input-date" ).val()
             );
+            // It is necessary to clone inputDate because addDays alters inputDate
+            var outputDate = inputDate.clone().addDays(150);
 
             // Use DateJs to create a nice presentation of the dates
             var dateFormat = "dddd, MMMM d, yyyy";
             var formattedInputDate = inputDate.toString(dateFormat);
+            var formattedOutputDate = outputDate.toString(dateFormat);
 
             // Display the dates on the page
             $( "#result-label-inputdate" ).html(formattedInputDate);
+            $( "#result-150" ).html(formattedOutputDate);
           }
         </script>
     </head>
